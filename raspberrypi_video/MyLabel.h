@@ -19,6 +19,7 @@ class MyLabel : public QLabel {
 
   public slots:
     void setImage(QImage);
+    void setMyText(const char* text);
 };
 
 #endif

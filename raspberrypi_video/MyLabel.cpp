@@ -14,3 +14,7 @@ void MyLabel::setImage(QImage image) {
   int h = this->height();
   setPixmap(pixmap.scaled(w, h, Qt::KeepAspectRatio));
 }
+
+void MyLabel::setMyText(const char* text) {
+  this->setText(text);
+}

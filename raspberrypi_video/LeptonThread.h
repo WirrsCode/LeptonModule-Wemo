@@ -30,7 +30,7 @@ public slots:
   void performFFC();
 
 signals:
-  void updateText(QString);
+  void setMyText(const char*);
   void updateImage(QImage);
 
 private:

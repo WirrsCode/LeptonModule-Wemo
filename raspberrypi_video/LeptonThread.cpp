@@ -164,6 +164,13 @@ void LeptonThread::wemoToggle(char* deviceName, const char* state){
 	strcat(commandString, state);
 	//printf("%s\n", commandString);
 	system(commandString);
+
+	if (strcmp(state, "on") == 0) {
+		emit setMyText("Presence Detected");
+	}
+	else {
+		emit setMyText("No Presence Detected");
+	}
 }
 
 char* LeptonThread::wemoGetFirstSwitch(char* deviceList) {
@@ -174,7 +181,7 @@ char* LeptonThread::wemoGetFirstSwitch(char* deviceList) {
 	while (strcmp(splitString, "Switch") != 0){
 		strcpy(splitString, strtok(NULL, ":\n "));
 	}
-	// Take the Token after the Switch
+	// Take the Token after
 	strcpy(splitString, strtok(NULL, ":\n "));
 	return splitString;		
 }
