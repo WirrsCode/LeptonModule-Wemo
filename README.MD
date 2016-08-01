@@ -29,6 +29,7 @@ Setting Up the Rasberry Pi
    you can find your WeMo device by running the command
 
        > wemo list
+       
        Switch: Living Room
 
 Running the Program
